@@ -1,4 +1,5 @@
 # Node.js
+
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -21,10 +22,8 @@ steps:
     ng build --prod
   displayName: 'npm install and build'
   
-- task: AzureRmWebAppDeployment@4
+- task: PublishBuildArtifacts@1
   inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Free Trial(89f685dc-04cb-4d5e-9aa4-631f86de3b44)'
-    appType: 'webApp'
-    WebAppName: 'BharathiVidyalaSchoolApps'
-    packageForLinux: 'dist\FsmsApp'
+    PathtoPublish: 'dist'
+    ArtifactName: 'app'
+    publishLocation: 'Container'
