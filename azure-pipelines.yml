@@ -26,17 +26,6 @@ steps:
     inputs:
       ConnectionType: 'AzureRM'
       azureSubscription: 'Free Trial(89f685dc-04cb-4d5e-9aa4-631f86de3b44)'
-- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'Free Trial(89f685dc-04cb-4d5e-9aa4-631f86de3b44)'
-    subscriptionId: '89f685dc-04cb-4d5e-9aa4-631f86de3b44'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'AngularAssignment'
-    location: 'East Asia'
-    templateLocation: 'Linked artifact'
-    csmFile: 'SchoolApp'
-    deploymentMode: 'Incremental'
       appType: 'webApp'
       WebAppName: 'BharathiVidyalaSchoolApps'
       packageForLinux: 'dist/FsmsApp'
