@@ -21,7 +21,7 @@ steps:
     ng build --prod
   displayName: 'npm install and build'
   
-  steps:
+
   - task: AzureRmWebAppDeployment@4
     inputs:
       ConnectionType: 'AzureRM'
