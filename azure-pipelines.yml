@@ -28,4 +28,4 @@ steps:
       azureSubscription: 'Free Trial(89f685dc-04cb-4d5e-9aa4-631f86de3b44)'
       appType: 'webApp'
       WebAppName: 'BharathiVidyalaSchoolApps'
-      packageForLinux: 'dist/FsmsApp/'
+      packageForLinux: 'dist/FsmsApp'
