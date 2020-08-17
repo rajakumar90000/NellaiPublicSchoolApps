@@ -27,3 +27,19 @@ steps:
     PathtoPublish: 'dist'
     ArtifactName: 'app'
     publishLocation: 'Container'
+
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'angular'
+    targetPath: 'src/NellaiPublicSchoolApps/dist'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Free Trial(89f685dc-04cb-4d5e-9aa4-631f86de3b44)'
+    appType: 'webApp'
+    WebAppName: 'BharathiVidyalaSchoolApps'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'AngularAssignment'
+    SlotName: 'production'
+    packageForLinux: 'src/NellaiPublicSchoolApps/dist'
