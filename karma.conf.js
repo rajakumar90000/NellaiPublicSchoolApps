@@ -2,8 +2,8 @@
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
 module.exports = function (config) {
-  config.set( {
-    browsers: [ 'Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox' ],
+  config.set({
+    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
     customLaunchers: {
       ChromeHeadlessNoSandbox: {
         base: 'ChromeHeadless',
@@ -23,7 +23,7 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, './coverage/FsmsApp'),
+      dir: require('path').join(__dirname, './coverage/NELLAIPUBLICSCHOOLAPPS'),
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
     },
