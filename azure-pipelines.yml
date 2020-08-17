@@ -31,7 +31,7 @@ steps:
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'angular'
-    targetPath: 'src/dist/NellaiPublicSchoolApps'
+    targetPath: '$(System.DefaultWorkingDirectory)/src/dist/NellaiPublicSchoolApps'
 
 - task: AzureRmWebAppDeployment@4
   inputs:
@@ -42,4 +42,4 @@ steps:
     deployToSlotOrASE: true
     ResourceGroupName: 'AngularAssignment'
     SlotName: 'production'
-    packageForLinux: 'src/dist/NellaiPublicSchoolApps'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/src/dist/NellaiPublicSchoolApps'
